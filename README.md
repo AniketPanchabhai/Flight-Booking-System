@@ -1,6 +1,15 @@
 # ✈️ FlightBooker - MERN Stack Flights Booking System
 
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-7.x-green.svg)](https://www.mongodb.com/)
+[![Express](https://img.shields.io/badge/Express-4.x-lightgrey.svg)](https://expressjs.com/)
+
 A **production-level, full-featured flights booking system** built with the MERN stack (MongoDB, Express, React, Node.js) featuring comprehensive authentication, role-based access control, and a complete booking system.
+
+## 🌟 Live Demo
+
+🚀 **[View Live Application](https://your-deployed-app-link.vercel.app)** *(Add your deployment link here)*
 
 ## 🎯 Quick Links
 

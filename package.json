@@ -1,0 +1,31 @@
+{
+  "name": "flights-booking-backend",
+  "version": "1.0.0",
+  "description": "Backend API for flights booking system using Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon backend/server.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "nodemon backend/server.js"
+  },
+  "keywords": [
+    "flights",
+    "booking",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.5.0",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

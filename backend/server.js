@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/database');
 const errorHandler = require('./middleware/errorHandler');
-const path = require('path');
+
 // Import routes
 const authRoutes = require('./routes/authRoutes');
 const flightRoutes = require('./routes/flightRoutes');
@@ -11,7 +11,6 @@ const bookingRoutes = require('./routes/bookingRoutes');
 const offerRoutes = require('./routes/offerRoutes');
 
 const app = express();
-const _dirname = path.resolve();
 
 // Middleware
 app.use(cors());
@@ -32,15 +31,7 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ message: 'Server is running' });
 });
 
-// Serve static files from frontend build
-app.use(express.static(path.join(_dirname, '../frontend/dist')));
-
-// Catch-all handler for SPA
-app.get('*', (_, res) => {
-  res.sendFile(path.resolve(_dirname, "..", "frontend", "dist", "index.html"));
-});
-
-// 404 handler for API routes
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
 });
@@ -49,6 +40,7 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
+
 const server = app.listen(PORT, () => {
   console.log(`\n🚀 Server running on port ${PORT}`);
   console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);

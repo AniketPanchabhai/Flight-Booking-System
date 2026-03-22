@@ -4,10 +4,10 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: "https://flight-booking-system-1-gbwt.onrender.com",
+    port: 5173,
     proxy: {
       '/api': {
-        target: 'https://flight-booking-system-1-gbwt.onrender.com',
+        target: 'http://localhost:5000',
         changeOrigin: true,
       }
     }
